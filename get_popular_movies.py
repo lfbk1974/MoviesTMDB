@@ -1,4 +1,6 @@
-from tmdbv3api import TMDb, Movie
+# Get the list of popular movies on The Movie Database. This list refreshes every day.
+from tmdbv3api import TMDb
+from tmdbv3api import Movie
 
 tmdb = TMDb()
 with open('key.txt') as f:
@@ -13,9 +15,3 @@ for p in popular:
     print(p.title)
     print(p.overview)
     print(p.poster_path)
-
-m = movie.details(343611)
-
-print(m.title)
-print(m.overview)
-print(m.popularity)
